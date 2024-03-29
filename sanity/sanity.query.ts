@@ -8,10 +8,12 @@ export async function getLevel(): Promise<Level[]> {
       _id,
       title,
       description,
+    
       "cards": cards[]->{
         _id,
         value,
         suit,
+        probability,
         "imageUrl": image.asset->url,
         description
       }

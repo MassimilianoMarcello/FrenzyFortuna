@@ -7,6 +7,19 @@ import { ThemeProvider } from '@emotion/react'
 import theme from '@/app/theme_emotion';
 import styled from '@emotion/styled'
 import MainPage from "@/components/MainPage/MainPage";
+import Card from '@/components/SingleCard/SingleCard';
+import LevelPage from '@/components/Level/Level'; 
+
+
+// Definisci totalScore e totalCards
+const totalScore = 100; // Sostituisci con il valore reale
+const totalCards = 10; // Sostituisci con il valore reale
+
+// Definisci la funzione onStartLevel
+const onStartLevel = () => {
+  // Implementa la logica per avviare il livello
+  console.log("Livello avviato!");
+}
 
 
 export default function Home() {
@@ -14,7 +27,7 @@ export default function Home() {
     <main className={styles.main}>
        <ThemeProvider theme={theme}>
 <Global styles={globalStyles} />
-<MainPage level={undefined} totalScore={undefined} totalCards={undefined}/>
+<MainPage totalScore={totalScore} totalCards={totalCards} onStartLevel={onStartLevel}  />
   
        </ThemeProvider>
 
