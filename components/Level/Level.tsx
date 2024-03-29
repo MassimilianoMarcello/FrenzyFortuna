@@ -34,7 +34,9 @@ const LevelPage = ({ level, onStartLevel }) => {
     <div>
       <h1>{level.title}</h1>
       <p>{level.description}</p>
-      <div>
+      <button onClick={handleStartLevel}>Start Level</button>
+
+      <CardsTableContainer>
         {visibleCards.map((card, index) => (
           <Card
             key={index}
@@ -44,10 +46,15 @@ const LevelPage = ({ level, onStartLevel }) => {
             onClick={() => handleCardClick(index)} // Passa il gestore di eventi del clic alla carta
           />
         ))}
-      </div>
-      <button onClick={handleStartLevel}>Start Level</button>
-    </div>
+      </CardsTableContainer>
+          </div>
   );
 };
 
 export default LevelPage;
+
+
+const CardsTableContainer = styled.div`
+    display: flex;
+    flex-wrap: wrap;
+`
