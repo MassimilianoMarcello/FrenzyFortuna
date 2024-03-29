@@ -36,7 +36,7 @@ const MainPage = ({ totalCards,onStartLevel }) => {
       <h1>Frenzy Fortuna</h1>
 
       {levels.map((levelData) => (
-        <LevelPage key={levelData._id} level={levelData} onStartLevel={onStartLevel} />
+        <LevelPage key={levelData._id} level={levelData}  />
       ))}
     
      
