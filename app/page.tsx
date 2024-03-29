@@ -27,7 +27,7 @@ export default function Home() {
     <main className={styles.main}>
        <ThemeProvider theme={theme}>
 <Global styles={globalStyles} />
-<MainPage totalScore={totalScore} totalCards={totalCards} onStartLevel={onStartLevel}  />
+<MainPage  totalCards={totalCards} onStartLevel={onStartLevel}  />
   
        </ThemeProvider>
 
