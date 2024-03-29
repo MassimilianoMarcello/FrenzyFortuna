@@ -132,7 +132,7 @@
 
 
 import React, { useState, useEffect } from 'react';
-import BetInput from '@/components/BetInput/BetInput';
+
 import LevelPage from '@/components/Level/Level'; 
 
 import { getLevel } from '@/sanity/sanity.query';
@@ -173,14 +173,14 @@ const MainPage = ({ totalScore, totalCards,onStartLevel }) => {
   return (
     <div>
       <h1>Frenzy Fortuna</h1>
-      <p>Total Score: {totalScore}</p>
-      <p>Total Cards: {totalCards}</p>
+
       {levels.map((levelData) => (
         <LevelPage key={levelData._id} level={levelData} onStartLevel={onStartLevel} />
       ))}
+            <p>Total Score: {totalScore}</p>
+      <p>Total Cards: {totalCards}</p>
       <p>Bettable Score per Card: {calculateBettableScore()}</p>
-      <BetInput onBetChange={handleBet} bettableScore={calculateBettableScore()} />
-    </div>
+        </div>
   );
 };
 
