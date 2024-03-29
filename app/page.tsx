@@ -6,6 +6,7 @@ import globalStyles from '@/app/global_emotion_styles';
 import { ThemeProvider } from '@emotion/react'
 import theme from '@/app/theme_emotion';
 import styled from '@emotion/styled'
+import MainPage from "@/components/MainPage/MainPage";
 
 
 export default function Home() {
@@ -13,7 +14,7 @@ export default function Home() {
     <main className={styles.main}>
        <ThemeProvider theme={theme}>
 <Global styles={globalStyles} />
-
+<MainPage level={undefined} totalScore={undefined} totalCards={undefined}/>
   
        </ThemeProvider>
 

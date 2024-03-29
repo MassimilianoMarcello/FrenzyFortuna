@@ -25,7 +25,7 @@ const NavBar2 = () => {
       <NavFixed>
         <LogoContainer href="/">
     
-          <AnimatedText><span>M</span>ass De<span>v</span></AnimatedText>
+          <AnimatedText><span>F</span>renzy <br /> Fortun<span>a</span></AnimatedText>
           <AnimatedLogo>
             <Image src={logoe} alt="mass dev logo" width={40} height={40} />
           </AnimatedLogo>
