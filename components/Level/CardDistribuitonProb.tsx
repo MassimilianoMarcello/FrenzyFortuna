@@ -3,7 +3,7 @@ import React from "react";
 
 const CardDistribution = ({ level }) => {
   const totalProbability = level.cards.reduce((acc, card) => acc + card.probability, 0);
-  const randomNumbers = Array.from({ length: 3 }, () => Math.random() * totalProbability);
+  const randomNumbers = Array.from({ length: 20 }, () => Math.random() * totalProbability);
 
   const selectedCards = randomNumbers.map(randomNumber => {
     let cumulativeProbability = 0;
