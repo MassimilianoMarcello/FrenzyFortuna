@@ -7,7 +7,7 @@ import theme from '@/app/theme_emotion';
 import Card from "@/components/SingleCard/SingleCard";
 import CardDistribution from "./CardDistribuitonProb";
 
-const TableCards = styled.div`
+const TableCard = styled.div`
   display: flex;
   flex-wrap:wrap;
 `;
@@ -15,7 +15,7 @@ const TableCards = styled.div`
 const LevelPage = ({ level }) => {
   const [visibleCards, setVisibleCards] = useState([]);
   const [credit, setCredit] = useState(100);
-  const [remainingCards, setRemainingCards] = useState(20);
+  const [remainingCards, setRemainingCards] = useState(0);
   const [betAmount, setBetAmount] = useState(0);
   const [creditChangeMessage, setCreditChangeMessage] = useState(null);
 
@@ -69,7 +69,7 @@ const LevelPage = ({ level }) => {
     <div>
       <h1>{level.title}</h1>
       <p>{level.description}</p>
-      <div>
+      <TableCard>
         {visibleCards.map((card, index) => (
           <Card
             key={index}
@@ -79,7 +79,7 @@ const LevelPage = ({ level }) => {
             onClick={() => handleCardClick(index, card.suit)} // Passa l'indice e il suit alla funzione di gestione del clic
           />
         ))}
-      </div>
+      </TableCard>
       <button onClick={handleStartLevel} disabled={remainingCards !== 0}>Start Level</button>
       <p>Credito rimanente: {credit}</p>
       <p>Carte rimanenti: {remainingCards}</p>
