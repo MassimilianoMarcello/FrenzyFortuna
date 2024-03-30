@@ -22,15 +22,17 @@ const TableCards = styled.div`
 
 
 
+
+
 const LevelPage = ({ level }) => {
     const [visibleCards, setVisibleCards] = useState([]);
     const [credit, setCredit] = useState(1000);
-    const [remainingCards, setRemainingCards] = useState(20);
+    const [remainingCards, setRemainingCards] = useState(3);
     const [betAmount, setBetAmount] = useState(0);
   
     // Funzione per calcolare l'importo della scommessa
     const calculateBetAmount = () => {
-      return credit / (2 * remainingCards);
+      return Math.round(credit / (2 * remainingCards));
     };
   
     // Funzione per avviare un nuovo livello
