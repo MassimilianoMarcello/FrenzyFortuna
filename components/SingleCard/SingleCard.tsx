@@ -13,7 +13,8 @@ const CardContainer = styled.div`
   border-radius: 5px;
   padding: 1rem;
   margin: 1rem;
-  width: 5rem;
+  width: 6rem;
+  height: 6rem;
   background-color: ${theme.colors.bigYellow};
   cursor: pointer;
 `;
@@ -30,8 +31,8 @@ const Card = ({ imageUrl, description, suit, onClick }) => {
   return (
     <CardContainer onClick={onClick}>
       {imageUrl && <StyledImage src={imageUrl} alt="Card" height={100} width={100} />}
-      <CardDescription>{description}</CardDescription>
-      {suit && <p>Suit: {suit}</p>}
+      {/* <CardDescription>{description}</CardDescription>
+      {suit && <p>Suit: {suit}</p>} */}
     </CardContainer>
   );
 };
