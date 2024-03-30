@@ -28,7 +28,7 @@ const TableCards = styled.div`
 
 const LevelPage = ({ level }) => {
   const [visibleCards, setVisibleCards] = useState([]);
-  const [credit, setCredit] = useState(1000);
+  const [credit, setCredit] = useState(10);
   const [remainingCards, setRemainingCards] = useState(3);
   const [betAmount, setBetAmount] = useState(0);
 
@@ -48,7 +48,7 @@ const LevelPage = ({ level }) => {
     // Decrementa il numero di carte rimanenti
     setRemainingCards(3);
     // Riporta il credito al valore iniziale
-    setCredit(1000);
+    setCredit(10);
   };
 
   const handleCardClick = (index, suit) => {
