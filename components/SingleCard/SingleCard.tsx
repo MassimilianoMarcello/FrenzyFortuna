@@ -5,6 +5,8 @@ import React, { useState } from "react";
 import styled from "@emotion/styled";
 import theme from '@/app/theme_emotion';
 
+
+
 const CardContainer = styled.div`
   display: flex;
   border: .1rem solid #ccc;
@@ -13,7 +15,7 @@ const CardContainer = styled.div`
   margin: 1rem;
   width: 5rem;
   background-color: ${theme.colors.bigYellow};
-  cursor: pointer; // Cambia il cursore al passaggio sopra la carta
+  cursor: pointer;
 `;
 
 const StyledImage = styled.img`
@@ -27,7 +29,6 @@ const CardDescription = styled.p`
 const Card = ({ imageUrl, description, suit, onClick }) => {
   return (
     <CardContainer onClick={onClick}>
-      {/* Mostra l'immagine solo se è stata cliccata */}
       {imageUrl && <StyledImage src={imageUrl} alt="Card" height={100} width={100} />}
       <CardDescription>{description}</CardDescription>
       {suit && <p>Suit: {suit}</p>}
